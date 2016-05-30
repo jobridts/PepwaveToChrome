@@ -2,7 +2,7 @@
 window.setInterval(getLocation, 1000);
 
 function getLocation() {
-  var focusAppId = "gmejafdcjhacpbmajnedjomlhijmflne";
+  var focusAppId = "iecjejdfkbdeomklchnioeeppmcombfj";
   var port = chrome.runtime.connect(focusAppId);
   port.postMessage({
     "request": "location"
