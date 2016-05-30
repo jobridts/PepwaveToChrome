@@ -1,0 +1,27 @@
+{
+  "name": "Pepwave UDP to Chrome",
+  "description": "Listens on UDP 60660 and answers to requests bij Chrome extensions",
+  "version": "0.2",
+  "manifest_version": 2,
+  "permissions":[
+    "background",
+    "geolocation",
+    "storage",
+    "browser"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "vlam.png", "128": "vlam.png" },
+  "sockets": {
+    "udp" : {
+      "bind" : "*"
+    }
+  },
+   "externally_connectable": {
+     "ids": ["*"],
+     "matches": ["https://focus.antwerpen.be/*","https://focus-a.antwerpen.be/*","https://focus-dev.antwerpen.be/*"]
+   }
+}

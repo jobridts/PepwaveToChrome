@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pepwave Location to localStorage",
+  "description": "Polls the Pepwave-Chrome App and puts the location in localStorage",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://focus.antwerpen.be/*","https://focus-a.antwerpen.be/*","https://focus-dev.antwerpen.be/*"],
+      "js": ["poll.js"]
+    }
+  ],
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": ["https://focus.antwerpen.be/*","https://focus-a.antwerpen.be/*","https://focus-dev.antwerpen.be/*"]
+  },
+  "icons": { "16": "vlam.png", "128": "vlam.png" }
+}
